@@ -29,3 +29,55 @@ This lab mirrors how enterprise SOCs detect threats such as:
 * Build SOC-ready investigation and analysis skills
 
 ---
+
+## 🏗️ Architecture Overview
+
+```
+Network Traffic (Live or PCAP)
+        ↓
+  Network Interface / PCAP
+        ↓
+ ┌──────────────────────────┐
+ │        Suricata           │
+ │  (Intrusion Detection)   │
+ │  - Signatures            │
+ │  - Alerts                │
+ │  - Flow logs             │
+ └─────────────┬────────────┘
+               ↓
+ ┌──────────────────────────┐
+ │           Zeek            │
+ │  (Network Security       │
+ │   Monitoring)            │
+ │  - conn.log              │
+ │  - dns.log               │
+ │  - http.log              │
+ │  - ssl.log               │
+ └─────────────┬────────────┘
+               ↓
+     SOC Analysis & Response
+```
+
+---
+
+## 🔍 Tool Breakdown
+
+### 🛡️ Suricata – Intrusion Detection System (IDS)
+
+Suricata is responsible for **detecting malicious or suspicious activity** using:
+
+* Signature-based detection (rules)
+* Protocol analysis
+* Threat intelligence feeds
+
+Suricata answers the question:
+
+> **“Is this network traffic malicious?”**
+
+**Key Outputs:**
+
+* Alerts (`eve.json`)
+* Flow records
+* DNS and HTTP events
+
+---

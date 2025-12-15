@@ -81,3 +81,50 @@ Suricata answers the question:
 * DNS and HTTP events
 
 ---
+
+### 🧠 Zeek – Network Security Monitoring (NSM)
+
+Zeek focuses on **deep visibility and context**, not alerts.
+
+It extracts and logs:
+
+* Connection metadata (`conn.log`)
+* DNS queries (`dns.log`)
+* HTTP requests (`http.log`)
+* TLS/SSL details (`ssl.log`)
+* File transfers
+
+Zeek answers the question:
+
+> **“What exactly happened on the network?”**
+
+---
+
+## ⚖️ Why Use Suricata and Zeek Together?
+
+| Tool     | Strength                           |
+| -------- | ---------------------------------- |
+| Suricata | Detects known threats and exploits |
+| Zeek     | Provides deep forensic context     |
+
+Together, they enable:
+
+* High-confidence detections
+* Faster incident investigation
+* Reduced false positives
+* Better threat hunting
+
+This combination is common in **enterprise SOCs and NDR platforms**.
+
+---
+
+## 🔄 Detection & Investigation Workflow
+
+1. Network traffic is mirrored or captured
+2. **Suricata** inspects traffic and generates alerts
+3. **Zeek** logs detailed protocol metadata
+4. Analyst correlates Suricata alerts with Zeek logs
+5. Incident is validated and investigated
+6. Response actions are decided
+
+---

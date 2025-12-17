@@ -1,4 +1,4 @@
-## Open-Source Network Detection and Response (NDR) SOC Lab
+## Network Detection and Response (NDR) SOC Lab with Packet Analysis.
 
 ---
 

@@ -63,6 +63,74 @@ suricata --build-info
 ip a
 ```
 
+**Example Output:**
+
+```text
+eth0: inet 192.168.1.10/24
+```
+
+**Selected Interface:**
+
+```text
+Interface: eth0
+IP Address: 192.168.1.10
+```
+
+---
+
+## 🧠 IDS Mode Configuration (AF_PACKET)
+
+Edit the Suricata configuration file:
+
+```bash
+sudo nano /etc/suricata/suricata.yaml
+```
+
+Configure `af-packet`:
+
+```yaml
+af-packet:
+  - interface: eth0
+    cluster-id: 99
+    cluster-type: cluster_flow
+```
+
+### Explanation
+
+* `interface` → Network interface to monitor
+* `cluster-id` → Enables load balancing
+* `cluster_flow` → Ensures traffic flows stay together
+* IDS mode → **Passive detection only**
+
+---
+
+## 📂 Logging Configuration
+
+### Enable JSON Logging (eve.json)
+
+Ensure the following is enabled:
+
+```yaml
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: eve.json
+```
+
+### Log Directory
+
+```text
+/var/log/suricata/
+```
+
+Key log files:
+
+* `eve.json` → Alerts & events
+* `fast.log` → Quick alerts
+* `stats.log` → Performance stats
+
+---
 
 
 

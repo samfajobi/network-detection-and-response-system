@@ -68,14 +68,14 @@ ip a
 **Example Output:**
 
 ```text
-eth0: inet 192.168.1.10/24
+eth0: inet xxx.xxx.x.xx/xx
 ```
 
 **Selected Interface:**
 
 ```text
 Interface: eth0
-IP Address: XXX.XXX.X.XX
+IP Address: xxx.xxx.x.xx
 ```
 
 ---

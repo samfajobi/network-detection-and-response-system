@@ -186,6 +186,75 @@ Suricata running in IDS mode
 
 ---
 
+## 🧪 Testing & Validation
+
+### Generate Basic Traffic
+
+```bash
+ping google.com
+```
+
+### Trigger Detection (Nmap Scan)
+
+```bash
+nmap -sS <target-ip>
+```
+
+### Monitor Alerts in Real Time
+
+```bash
+sudo tail -f /var/log/suricata/eve.json
+```
+
+
+---
+
+## ⚠️ Common Issues & Troubleshooting
+
+| Issue                  | Solution                       |
+| ---------------------- | ------------------------------ |
+| No alerts generated    | Verify interface configuration |
+| Service fails to start | Check YAML syntax              |
+| Empty log files        | Confirm traffic is flowing     |
+| Wrong interface        | Re-check `ip a` output         |
+
+---
+
+## 🧠 Observations & Lessons Learned
+
+* Suricata runs in IDS mode by default
+* Configuration changes require a service restart
+* AF_PACKET enables high-performance capture
+* Logs provide SOC-ready investigation context
+
+---
+
+## 📈 Next Steps
+
+* Integrate **Zeek** for protocol metadata
+* Forward logs to **Wazuh / SIEM**
+* Enable PCAP logging
+* Tune rules and reduce false positives
+* Transition to **IPS mode (NFQUEUE)**
+
+---
+
+## 📚 References
+
+* [https://suricata.io](https://suricata.io)
+* [https://docs.suricata.io](https://docs.suricata.io)
+* [https://rules.emergingthreats.net](https://rules.emergingthreats.net)
+
+---
+
+## 👤 Author
+
+**Olusegun Fajobi**
+Cybersecurity / SOC Analyst
+GitHub: `https://github.com/samfajobi`
+
+---
+
 
 
 

@@ -1,7 +1,5 @@
 ## The **heart of how SOC analysts actually monitor Suricata in real time**
 
-```
-
 # 📁 Breakdown of Important Suricata Log Files
 
 ## 1️⃣ `eve.json` (MOST IMPORTANT)

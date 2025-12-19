@@ -167,8 +167,8 @@ Fixed:
 
 Key log files:
 
-* `eve.json` → Alerts & events
-* `fast.log` → Quick alerts
+* `eve.json` → Alerts & events in details
+* `fast.log` → Quick alerts(for quick glance)
 * `stats.log` → Performance stats
 
 ---

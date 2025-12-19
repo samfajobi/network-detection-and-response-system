@@ -130,29 +130,34 @@ outputs:
 
 ## 🧾 Rule Management
 
+![Suricata-IDS-setup-1](screenshots/Suricata-Rule-Example.png)
+
 ### Default Rule Directory
 
 ```text
 /var/lib/suricata/rules/
 ```
+![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-5a.png)
 
-### Update Rules
+### Set your Rules
+
+![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6.png)
+
+Chekout link below to learn more about rules writing
+* [https://docs.suricata.io](https://docs.suricata.io)
+
+### Test your config file to make sure all works fine and rules are syntatically correct
 
 ```bash
-sudo suricata-update
+sudo suricata -T -c /etc/suricata/suricata.yaml -v
 ```
+![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6a.png)
 
-### Verify Loaded Rules
+![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6b.png)
 
-```bash
-ls /var/lib/suricata/rules/
-```
+![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6c.png)
 
-### Log Directory
 
-```text
-/var/log/suricata/
-```
 
 Key log files:
 
@@ -194,7 +199,7 @@ Suricata running in IDS mode
 
 ## 🧪 Testing & Validation
 
-### Generate Basic Traffic
+### Generate Basic Traffic(Another Bash or Kali Linux can be used here...)
 
 ```bash
 ping google.com
@@ -211,6 +216,7 @@ nmap -sS <target-ip>
 ```bash
 sudo tail -f /var/log/suricata/eve.json
 ```
+
 
 
 ---

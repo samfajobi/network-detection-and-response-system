@@ -152,12 +152,15 @@ Chekout link below to learn more about rules writing
 sudo suricata -T -c /etc/suricata/suricata.yaml -v
 ```
 Error;
+
 ![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6a.png)
 
 Error;
+
 ![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6b.png)
 
 Fixed;
+
 ![Suricata-IDS-setup-1](screenshots/suricata-IDS-setup-6c.png)
 
 
